@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine</title>
+    <link rel="icon" type="image/JPG" href="./favicon.JPG">
+    <style>
+        /* Center the content */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #2e1a47; /* Dark Purple */
+            color: #ffd700; /* Gold */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            background-color: #800080; /* Purple */
+            color: gold;
+            border: none;
+            padding: 15px 25px;
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+            max-width: 90%; /* Ensures it doesn’t overflow on small screens */
+        }
+
+        button:hover {
+            background-color: #a32cc4; /* Lighter purple */
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            max-width: 80%; /* Prevents long text from stretching too much */
+        }
+
+        @media (max-width: 600px) {
+            button {
+                font-size: 20px;
+                padding: 12px 20px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button id="loveButton">Click Me</button>
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("loveButton").addEventListener("click", function () {
+            document.getElementById("message").textContent = "Sunshine, I love you!";
+        });
+    </script>
+
+</body>
+</html>
